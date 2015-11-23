@@ -9,11 +9,11 @@
 	<body>
 <?php
 $page_title = 'register';
-include ('/Applications/XAMPP/xamppfiles/htdocs/includes/header.html');
+include ('includes/header.html');
 
 if ($_SERVER['REQUEST_METHOD']== 'POST')
 {
-	require('/Applications/XAMPP/xamppfiles/htdocs/includes/connect_db.php');
+	require('includes/connect_db.php');
 	$errors = array();
 //Username
 	if ( empty($_POST['Username']))
@@ -139,7 +139,7 @@ if ($_SERVER['REQUEST_METHOD']== 'POST')
 		}
 
 		mysqli_close($dbc);
-		include('/Applications/XAMPP/xamppfiles/htdocs/includes/footer.html');
+		include('includes/footer.html');
 		exit();
 	}
 	else
@@ -211,7 +211,7 @@ if ($_SERVER['REQUEST_METHOD']== 'POST')
 	<input type ="submit" value = "Register">
 </p>
 </form>
-<?php include('/Applications/XAMPP/xamppfiles/htdocs/includes/footer.html'); ?>
+<?php include('includes/footer.html'); ?>
 </body>
 </html>
 
